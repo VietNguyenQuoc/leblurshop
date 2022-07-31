@@ -9,6 +9,7 @@ export default function ProductTile({
       <a
         href={url}
         target="_blank"
+        rel="noreferrer"
         className="w-full block text-center bg-shopee text-white font-semibold text-lg px-2 py-2 mt-8"
       >
         {title}
