@@ -10,6 +10,9 @@ const nextConfig = {
 
     return config;
   },
+  images: {
+    domains: ["cf.shopee.vn"],
+  },
 };
 
 module.exports = nextConfig;

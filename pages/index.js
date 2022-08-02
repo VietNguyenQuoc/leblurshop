@@ -19,7 +19,7 @@ const productList = productListRaw
 
 export default function Home() {
   return (
-    <div>
+    <div className="bg-gray-100 pt-8">
       <Head>
         <title>Leblurshop</title>
         <meta name="description" content="Mua hàng tại Leblurshop" />
@@ -27,10 +27,27 @@ export default function Home() {
       </Head>
 
       <main>
-        <h1 className="text-blue-700 text-6xl font-extralight text-center">
+        <h1 className="text-primary text-6xl font-extralight text-center">
           Leblurshop
         </h1>
-        <div className="contact-us bg-slate-700 text-white text-center mt-20 py-8">
+
+        <div className="product-list-container bg-white mt-20 px-20 py-12">
+          <h2 className="text-center text-4xl font-medium text-primary">
+            Sản phẩm nổi bật
+          </h2>
+          <div className="product-list bg-white grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-evenly mt-12">
+            {productList.map(({ productUrl, imgUrl, title }, index) => (
+              <ProductTile
+                key={index}
+                url={productUrl}
+                imgUrl={imgUrl}
+                title={title}
+              />
+            ))}
+          </div>
+        </div>
+
+        <div className="contact-us bg-slate-700 text-white text-center py-8">
           <h2 className="text-2xl">Liên hệ nhân viên tư vấn</h2>
           <div className="flex gap-20 justify-center mt-8">
             <a
@@ -58,9 +75,8 @@ export default function Home() {
               <img src="zalo.png" />
             </a>
           </div>
-
           <div className="social flex justify-center gap-8 mt-12">
-            <a className="flex gap-6 items-center bg-blue-800 w-fit py-3 px-8 rounded-xl">
+            <a className="flex gap-6 items-center bg-blue-800 w-fit py-3 px-8 rounded-xl cursor-pointer">
               <svg
                 className="fill-white h-16"
                 xmlns="http://www.w3.org/2000/svg"
@@ -68,23 +84,13 @@ export default function Home() {
               >
                 <path d="M158.232 219.912v-94.461h31.707l4.747-36.813h-36.454V65.134c0-10.658 2.96-17.922 18.245-17.922l19.494-.009V14.278c-3.373-.447-14.944-1.449-28.406-1.449-28.106 0-47.348 17.155-47.348 48.661v27.149H88.428v36.813h31.788v94.461l38.016-.001z" />
               </svg>
-              <span className="font-bold text-2xl">Xem thêm tại Facebook</span>
+              <span className="font-bold text-xl">Xem thêm tại Facebook</span>
             </a>
-            <a className="flex gap-6 items-center bg-shopee w-fit py-3 px-8 rounded-xl">
+            <a className="flex gap-6 items-center bg-shopee w-fit py-3 px-8 rounded-xl cursor-pointer">
               <img src="shopee.png" className="h-16" />
-              <span className="font-bold text-2xl">Xem thêm tại Shopee</span>
+              <span className="font-bold text-xl">Xem thêm tại Shopee</span>
             </a>
           </div>
-        </div>
-        <div className="product-list grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-evenly mt-20">
-          {productList.map(({ productUrl, imgUrl, title }, index) => (
-            <ProductTile
-              key={index}
-              url={productUrl}
-              imgUrl={imgUrl}
-              title={title}
-            />
-          ))}
         </div>
       </main>
     </div>

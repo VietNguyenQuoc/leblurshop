@@ -5,6 +5,7 @@ module.exports = {
     extend: {
       colors: {
         shopee: "#fb5533",
+        primary: "#2F4858",
       },
       fontFamily: {
         sans: ["Montserrat"],
