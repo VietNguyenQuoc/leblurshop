@@ -31,11 +31,11 @@ export default function Home() {
           Leblurshop
         </h1>
 
-        <div className="product-list-container bg-white mt-20 px-20 py-12">
+        <div className="product-list-container bg-white mt-20 px-8 lg:px-20 py-12">
           <h2 className="text-center text-4xl font-medium text-primary">
             Sản phẩm nổi bật
           </h2>
-          <div className="product-list bg-white grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-evenly mt-12">
+          <div className="product-list bg-white grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-center items-center mt-12">
             {productList.map(({ productUrl, imgUrl, title }, index) => (
               <ProductTile
                 key={index}
@@ -49,7 +49,7 @@ export default function Home() {
 
         <div className="contact-us bg-slate-700 text-white text-center py-8">
           <h2 className="text-2xl">Liên hệ nhân viên tư vấn</h2>
-          <div className="flex gap-20 justify-center mt-8">
+          <div className="flex gap-8 sm:gap-20 justify-center mt-8">
             <a
               href="https://www.google.com"
               target="_blank"
@@ -75,7 +75,7 @@ export default function Home() {
               <img src="zalo.png" />
             </a>
           </div>
-          <div className="social flex justify-center gap-8 mt-12">
+          <div className="social flex flex-col sm:flex-row justify-center items-center gap-8 mt-12">
             <a className="flex gap-6 items-center bg-blue-800 w-fit py-3 px-8 rounded-xl cursor-pointer">
               <svg
                 className="fill-white h-16"

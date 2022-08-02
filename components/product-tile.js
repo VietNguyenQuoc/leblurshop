@@ -4,8 +4,8 @@ export default function ProductTile({
   title = "Mua tại Shopee",
 }) {
   return (
-    <div className="w-64">
-      <img className="w-full h-64" src={imgUrl} />
+    <div className="w-60 mx-auto">
+      <img className="w-full h-60" src={imgUrl} />
       <a
         href={url}
         target="_blank"
